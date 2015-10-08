@@ -24,25 +24,20 @@ gem 'simple_form', '~> 3.2.0'
 gem 'cocoon', '~> 1.2.6'
 gem 'paperclip', '~> 4.3.1'
 gem 'bootstrap-sass', '~> 3.3.5.1'
-gem 'pg', '~>0.13.2'
+
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 
-group :development do
-	  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
+
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console', '~> 2.0'
+
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-	adapter: postgresql
-  encoding: unicode
-  database: [insert your dev database name]
-  pool: 5
-
-  test do
-  adapter: postgresql
-  encoding: unicode
-  database: [insert your test database name]
-  pool: 5
-
-
 end
+
 

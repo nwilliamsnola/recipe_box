@@ -29,7 +29,7 @@ gem 'pg', '~>0.13.2'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 
-group :development, :test do
+group :development do
 	  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 	adapter: postgresql
@@ -37,7 +37,7 @@ group :development, :test do
   database: [insert your dev database name]
   pool: 5
 
-  test:  
+  test do
   adapter: postgresql
   encoding: unicode
   database: [insert your test database name]

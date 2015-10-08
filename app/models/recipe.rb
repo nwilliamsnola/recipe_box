@@ -1,7 +1,7 @@
 class Recipe < ActiveRecord::Base
 
-	has_many :ingredients
-	has_many :directions
+	has_many :ingredients, dependent: :destroy
+	has_many :directions, dependent: :destroy
 	accepts_nested_attributes_for :ingredients, 
 									reject_if: proc { |attributes| attributes['name'].blank? },
   															allow_destroy: true
